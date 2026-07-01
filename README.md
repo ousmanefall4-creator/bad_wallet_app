@@ -1,17 +1,35 @@
-# bad_wallet_app
+# 📱 Bad Wallet App
 
-A new Flutter project.
+Une application mobile de gestion de portefeuille (Wallet) moderne et intuitive, développée avec **Flutter** pour le frontend et connectée à une API **Spring Boot** pour le backend.
 
-## Getting Started
+Ce projet a été réalisé dans le cadre de l'évaluation finale du semestre de **Flutter (L3 S2 - 2026)**.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Fonctionnalités Réalisées
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+* **Gestion du solde :** Visualisation en temps réel du solde du portefeuille.
+* **Transferts d'argent :** Envoi rapide et sécurisé de fonds vers d'autres utilisateurs.
+* **Paiement de factures :** Interface dédiée pour le règlement des factures (`bills_screen.dart`).
+* **Historique des transactions :** Suivi complet des opérations effectuées.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🏗️ Architecture du Projet
+
+Le projet respecte rigoureusement l'architecture **Feature-First**, garantissant une modularité optimale du code source :
+
+```text
+lib/
+│
+├── core/                  # Éléments partagés (constantes, thèmes)
+│   └── constants.dart
+│
+├── features/              # Organisation par blocs de fonctionnalités
+│   ├── auth/              # Authentification (login, splash)
+│   ├── bills/             # Gestion et paiement des factures
+│   ├── dashboard/         # Écran principal et état du wallet
+│   ├── history/           # Historique des transactions
+│   └── transfers/         # Effectuer un transfert
+│
+└── main.dart              # Point d'entrée de l'application
